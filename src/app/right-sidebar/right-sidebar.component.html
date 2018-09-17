@@ -1,0 +1,36 @@
+<div class="choise">
+<h4>Choice</h4>
+<form action="/action_page.php">
+  <input type="radio" name="radio" value="" checked> Topic<br>
+  <select name="topic" style="width:100%;margin-bottom:20px;">
+    <option value="all">All</option>
+    <option *ngFor="let topic of data.topic" [value]="topic">{{topic}}</option>
+ </select> <br>
+  <input type="radio" name="radio" value="sector">Sector<br>
+   <select name="sector" style="width:100%;margin-bottom:20px;">
+     <option value="all">All</option>
+    <option *ngFor="let sector of data.sector" [value]="sector">{{sector}}</option>
+</select> <br>
+  <input type="radio" name="radio" value="region"> Region<br>
+    <select name="region" style="width:100%;margin-bottom:20px;">
+      <option value="all">All</option>
+      <option *ngFor="let region of data.region" [value]="region">{{region}}</option>
+ </select> 
+  <br>
+  <input type="radio" name="radio" value="region"> PESTLE<br>
+    <select name="pestel" style="width:100%;margin-bottom:20px;">
+          <option *ngFor="let pestle of data.pestle" [value]="pestle">{{pestle}}</option>
+</select> 
+  <br>
+</form> 
+
+</div>
+
+<div class="measure">
+<h4>Measures</h4>
+<form>
+  <input type="checkbox" name="intensity" value="intensity" checked (click)="setMeasure('intensity',Iflag)"> Intensity<br>
+  <input type="checkbox" name="relevance" value="relevance" (click)="setMeasure('relevance',Rflag)"> Relevance <br>
+  <input type="checkbox" name="Likelihood" value="Likelihood" (click)="setMeasure('likelihood',Lflag)"> Likelihood <br>
+</form>
+</div>
